@@ -3,7 +3,7 @@ Instructions to start the pytorch docker container for YOLO models
 
 1. open up the terminal
    
-3. run './run_yolo.sh'
+2. run './run_yolo.sh'
    
   2.1. if that fails you may need to run some additional commands
   
@@ -13,11 +13,11 @@ Instructions to start the pytorch docker container for YOLO models
   
   2.4. retry './run_yolo.sh'
   
-4. now you should be in the container, follow the remaining to run the demo
+3. now you should be in the container, follow the remaining to run the demo
    
-6. run 'cd YOLOv8-Face/'
+4. run 'cd YOLOv8-Face/'
    
-8. run 'python demoYolo.py'
+5. run 'python demoYolo.py'
 
 
 The workspace outside of the container is located at:
