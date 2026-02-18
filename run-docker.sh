@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#sudo usermod -aG docker $USER
-
-#newgrp docker
-
 xhost +local:docker
 
 docker run -it --rm \
@@ -28,6 +24,8 @@ docker run -it --rm \
   --env DISPLAY=$DISPLAY \
   --volume /temp/.X11-unix:/tmp/.X11-unix:rw \
   --env QT_X11_NO_MITSHM=1 \
+  --user $(id -u):$(id -g) \
+  --env HOME=/workspace \
   yolo-jetson
-  #bash -c "pip3 install -q ultralytics && exec bash"
+ 
   

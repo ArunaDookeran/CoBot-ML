@@ -23,6 +23,7 @@ def get_model(weights):
 
 # Added to help with 'cold start'
 # Warm up CUDA
+'''
 import gc
 print("Waring up GPU...")
 try:
@@ -40,6 +41,7 @@ except Exception as e:
     dummy = torch.zeros(1).cuda()
     del dummy
     torch.cuda.empty_cache()
+   '''
     
 # Initialize YOLO on GPU device.
 detector = get_model('yolov8n_100e.pt')
